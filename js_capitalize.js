@@ -1,10 +1,12 @@
 function capitalize() {
+    this.capitalized = "";
+
     let words_in_string = this.split(" ");
-    
+
     if(words_in_string.length != 0)
     {
         words_in_string.forEach((word,word_index) => {
-            let lowercase_word = word.LowerCase();
+            let lowercase_word = word.toLowerCase();
 
             let capitalized_first_letter = word.charAt(0).toUpperCase();
 
@@ -21,3 +23,4 @@ function capitalize() {
 
     return this.capitalized;
 }
+String.prototype.capitalize = capitalize;
